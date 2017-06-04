@@ -10,16 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/teaguecnelson/measured_ux.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/teaguecnelson/measured_ux/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/teaguecnelson/measured_ux#readme",
   "devDependencies": {
-    "node-sass": "^4.5.2",
+    "node-sass": "^4.5.3",
     "nodemon": "^1.11.0"
-  }
+  },
+  "dependencies": {}
 }

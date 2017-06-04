@@ -226,7 +226,8 @@ a:hover {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #f7f5f5; }
+  background-color: #f7f5f5;
+  background-color: blue; }
 
 .subtitle {
   text-align: center;
