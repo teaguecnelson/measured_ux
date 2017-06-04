@@ -5,14 +5,14 @@ html {
 }
 
 body {
-    margin: 0 1rem;
+    margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     // FIXME: Remove after adding autoprefixer
     display:  -webkit-flex;
     -webkit-flex-direction: column;
-    //background-color: $body-background;
+    background-color: $background-color;
 }
 
 code {

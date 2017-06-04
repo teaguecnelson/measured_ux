@@ -1,3 +1,9 @@
+/*--------------------*         Global
+\*--------------------*/
+/*--------------------*         Colors
+\*--------------------*/
+/*--------------------*       molecules
+\*--------------------*/
 /**
  * Flex Grid -
  * Version: 0.3.2
@@ -48,7 +54,7 @@
 /**
  * Spacing mixin to create uniform margin/padding
  */
-.row, .project-wrapper {
+.row, .services, .project-wrapper, .about {
   display: flex;
   display: -webkit-flex; }
 
@@ -65,16 +71,16 @@
   margin-right: -0.5rem;
   padding-left: 2rem;
   padding-right: 2rem; }
-  @media only screen and (min-width: 790px) {
+  @media only screen and (min-width: 768px) {
     .row {
       margin-left: -0.75rem;
       margin-right: -0.75rem; } }
-  @media only screen and (min-width: 790px) {
+  @media only screen and (min-width: 768px) {
     .row {
       padding-left: 3rem;
       padding-right: 3rem; } }
 
-.project-wrapper {
+.services, .project-wrapper, .about {
   box-sizing: border-box;
   flex-direction: column;
   flex-grow: 0;
@@ -84,8 +90,8 @@
   -webkit-flex-shrink: 0;
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
-  @media only screen and (min-width: 790px) {
-    .project-wrapper {
+  @media only screen and (min-width: 768px) {
+    .services, .project-wrapper, .about {
       padding-left: 0.75rem;
       padding-right: 0.75rem; } }
 
@@ -101,21 +107,63 @@
  * Step 1, for each namespace, create the grid-base
  * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
  */
-.project-wrapper {
+.services, .project-wrapper, .about {
   flex-basis: 100%;
   max-width: 100%;
   -webkit-flex-basis: 100%; }
 
-.project-wrapper {
+.services, .project-wrapper, .about {
   margin-left: 0%; }
 
-@media only screen and (min-width: 790px) {
+@media only screen and (min-width: 768px) {
   .project-wrapper {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
     -webkit-flex-basis: 33.33333%; }
+  .about {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+    -webkit-flex-basis: 66.66667%; }
+  .services {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+    -webkit-flex-basis: 83.33333%; }
   .project-wrapper {
-    margin-left: 0%; } }
+    margin-left: 0%; }
+  .services {
+    margin-left: 8.33333%; }
+  .about {
+    margin-left: 16.66667%; } }
+
+html {
+  font-size: 1.15em; }
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background-color: #f7f5f5; }
+
+code {
+  display: block;
+  margin: 1rem 0;
+  background: #4d4c4c;
+  color: #fefefe;
+  padding: 2rem; }
+
+fieldset {
+  border: none;
+  margin: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+main {
+  flex: 1; }
 
 h1 {
   font-size: 2.1rem;
@@ -189,19 +237,14 @@ a:hover {
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #818080; }
 
-.companies {
+.services {
   position: relative;
-  margin: auto;
-  width: 80%;
-  padding-top: 20px; }
-  @media only screen and (min-width: 790px) {
-    .companies {
-      width: 70%; } }
+  padding: 20px 7px 40px 7px; }
 
-.co-title {
+.services-header {
   margin-bottom: 1rem; }
 
-.co-subtitle {
+.services-subheader {
   margin: 1rem 0rem 4rem 0rem; }
 
 .row {
@@ -209,96 +252,70 @@ a:hover {
 
 .project {
   border: 1px solid #e5e6e5;
-  background-color: white;
+  background-color: #fefefe;
   margin: 0rem 0rem 1rem 0rem; }
-  @media only screen and (min-width: 790px) {
+  @media only screen and (min-width: 768px) {
     .project {
       margin: 0rem 0.15rem 1.75rem 0.15rem; } }
 
-.co-logo {
+.project-img {
   max-width: 100%;
   padding: 6% 0rem; }
 
-/*--------------------*        Mixins
-\*--------------------*/
-/*--------------------*    Global Elements
-\*--------------------*/
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: #f7f5f5;
-  background-color: blue; }
-
-.subtitle {
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 2.5rem; }
-
-.spacer {
-  height: 3rem; }
-  @media screen and (max-width: 790px) {
-    .spacer {
-      height: 0rem; } }
-
-/*--------------------*         Header
-\*--------------------*/
 .header {
   position: fixed;
   width: 100%;
-  height: 75px;
-  background-color: #f7f5f5;
+  height: 80px;
+  background-color: #fefefe;
   border-bottom: 1px solid #d7d5d5;
   z-index: 10; }
 
 .navbar {
   border: none; }
 
-@media screen and (max-width: 790px) {
-  .nav {
-    position: relative; } }
+.nav {
+  position: relative; }
 
 .navbar-inverse {
-  background-color: #f7f5f5;
+  background-color: #fefefe;
   margin-left: 4%;
-  margin-right: 4%; }
+  margin-right: 4%;
+  padding-top: 7px; }
 
 .navbar-nav {
   display: inline-block;
   position: relative;
-  padding-top: 12px; }
-  @media (min-width: 790px) {
+  padding-top: 8px; }
+  @media only screen and (min-width: 768px) {
     .navbar-nav {
       float: right; } }
 
 .logo {
   display: inline-block;
   position: relative;
-  float: left;
-  max-height: 50px;
-  max-width: 285px; }
-  @media screen and (max-width: 790px) {
+  margin: auto;
+  margin-top: .5rem;
+  max-width: 190px; }
+  @media only screen and (min-width: 768px) {
     .logo {
-      display: inline-block;
-      position: relative;
-      margin: auto;
-      float: none;
-      margin-top: .5rem;
-      max-width: 190px; } }
+      margin: 0;
+      float: left;
+      max-width: 290px; } }
 
 .navbar-brand {
   padding: 12px; }
-  @media (min-width: 790px) {
+  @media only screen and (min-width: 768px) {
     .navbar-brand {
       padding-left: 0; } }
 
 ul.menu {
-  display: inline-block;
-  position: relative;
-  float: right;
-  bottom: 5px; }
-  @media screen and (max-width: 790px) {
+  display: none; }
+  @media only screen and (min-width: 768px) {
     ul.menu {
-      display: none; } }
+      display: inline-block;
+      position: relative;
+      float: right;
+      bottom: 5px; } }
 
 .navbar-toggle {
   position: relative;
@@ -315,177 +332,103 @@ ul.menu {
   background-color: #231F20; }
 
 .navbar-inverse .navbar-toggle {
-  border: none; }
+  border: none;
+  padding-top: 4px; }
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
   background-color: transparent; }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  border: none; }
-  @media screen and (max-width: 790px) {
+  background-color: #fefefe;
+  padding-bottom: .5rem; }
+  @media only screen and (min-width: 768px) {
     .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-      background-color: #ffffff;
-      padding-bottom: .5rem; } }
+      border: none;
+      padding: 0; } }
 
-/*--------------------*         Hero
-\*--------------------*/
-.hero {
+.hero-cover {
   position: relative;
-  margin-left: 0px;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   background-color: #231F20; }
 
-.hero_img {
+.hero-img {
   position: relative;
-  margin-left: 0px;
-  background-image: url("../images/spacexxx.jpg");
+  background-image: url("../images/hero.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   opacity: .7;
   width: 100%;
-  height: 90vh; }
+  height: 80vh; }
 
-.slogan {
+.slogan-wrapper {
   position: absolute;
-  bottom: 150px;
-  left: 23%;
-  right: 23%;
   text-align: center;
-  opacity: 100; }
-  @media screen and (max-width: 790px) {
-    .slogan {
-      left: 10%;
-      right: 10%;
-      bottom: 5%; } }
+  opacity: 100;
+  left: 10%;
+  right: 10%;
+  bottom: 5%; }
+  @media only screen and (min-width: 768px) {
+    .slogan-wrapper {
+      bottom: 150px;
+      left: 23%;
+      right: 23%; } }
 
-@media screen and (max-width: 790px) {
-  .slogan-txt {
+@media only screen and (min-width: 768px) {
+  .slogan {
     font-size: 1.85rem; } }
 
-/*--------------------*         About
-\*--------------------*/
-.about {
-  position: relative;
-  width: 63%;
-  margin: auto;
-  padding: 35px;
-  padding-top: 50px;
-  max-width: 800px; }
-  @media screen and (max-width: 790px) {
-    .about {
-      width: 80%; } }
+.slogan-subtitle {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem; }
 
-.about_leadin {
-  text-align: center; }
-
-.list {
-  padding-left: 2rem; }
-
-/*--------------------*         Team  //FIXME section needs cleaning
-\*--------------------*/
-.team {
-  position: relative;
-  margin: auto;
-  width: 80%;
-  padding-top: 20px;
-  height: auto; }
-  @media screen and (max-width: 790px) {
-    .team {
-      max-width: 400px;
-      margin: 0 auto; } }
-  .team .person_left {
-    float: center;
-    position: relative;
-    display: inline-block;
-    width: 31%;
-    max-width: 400px;
-    margin-bottom: 20px;
-    background-color: white;
-    width: 100%;
-    margin-bottom: 1rem; }
-  .team .person_center {
-    float: center;
-    position: relative;
-    display: inline-block;
-    width: 31%;
-    max-width: 400px;
-    margin-bottom: 20px;
-    background-color: white;
-    width: 100%;
-    margin-bottom: 1rem; }
-  .team .person_right {
-    float: center;
-    position: relative;
-    display: inline-block;
-    width: 31%;
-    max-width: 400px;
-    margin-bottom: 20px;
-    background-color: white;
-    width: 100%;
-    margin-bottom: 1rem; }
-  .team .person {
-    width: 100%;
-    object-fit: contain; }
-  @media screen and (min-width: 790px) {
-    .team {
-      position: relative;
-      text-align: center;
-      margin: 0 auto 65px;
-      max-width: 900px;
-      padding: 20px; }
-      .team .person_left {
-        float: left;
-        position: relative;
-        display: inline-block;
-        width: 31%;
-        max-width: 400px;
-        margin-bottom: 20px;
-        background-color: white; }
-      .team .person_center {
-        float: none;
-        position: relative;
-        display: inline-block;
-        width: 31%;
-        max-width: 400px;
-        margin-bottom: 20px;
-        background-color: white; }
-      .team .person_right {
-        float: right;
-        position: relative;
-        display: inline-block;
-        width: 31%;
-        max-width: 400px;
-        margin-bottom: 20px;
-        background-color: white; } }
-
-.clear {
-  clear: both; }
-
-/*--------------------*         Footer  //Could be cleaned
-\*--------------------*/
-.footer {
-  padding: 1.5rem 0; }
-
-.footer_container {
+.footer_wrapper {
   margin: 0 auto;
   width: 80%;
   border-top: 1px solid #d7d5d5; }
+  @media only screen and (min-width: 768px) {
+    .footer_wrapper {
+      padding: 0.5rem 0; } }
 
 .co_name {
-  position: relative;
-  float: left;
-  margin: 1.7rem 0; }
-  @media screen and (max-width: 515px) {
+  display: block;
+  text-align: left; }
+  @media only screen and (min-width: 768px) {
     .co_name {
-      margin: 1rem auto 0; } }
+      display: inline-block; } }
 
 .contact_us {
-  position: relative;
-  float: right;
-  margin: 1.7rem 0; }
-  @media screen and (max-width: 515px) {
+  display: block;
+  text-align: left; }
+  @media only screen and (min-width: 768px) {
     .contact_us {
-      margin: .8rem auto 1.6rem;
-      float: left; } }
+      display: inline-block;
+      float: right;
+      text-align: right; } }
+
+.about {
+  position: relative;
+  padding: 50px 7px 40px 7px; }
+
+.about-header {
+  text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  .about-description {
+    text-align: center; } }
+
+.contact {
+  position: relative;
+  margin: auto;
+  padding: 3.25rem 35px 5rem; }
+  @media only screen and (min-width: 768px) {
+    .contact {
+      padding: 3.25rem 35px 12rem; } }
+
+.contact-leadin {
+  text-align: center; }
+
+.contact-email {
+  text-align: center; }

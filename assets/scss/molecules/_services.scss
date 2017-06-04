@@ -1,19 +1,15 @@
-.companies {
+.services {
+  @include makeColumn($size:12, $offset:0);
+  @include makeColumn(md, $size:10, $offset:1);
   position: relative;
-  margin: auto;
-  width: 80%;
-  padding-top: 20px;
-
-  @include breakpoint($medium) {
-    width: 70%;
-  }
+  padding: 20px 7px 40px 7px;
 }
 
-.co-title {
+.services-header {
   margin-bottom: 1rem;
 }
 
-.co-subtitle {
+.services-subheader {
   margin: 1rem 0rem 4rem 0rem;
 }
 
@@ -28,7 +24,7 @@
 
 .project {
   border: 1px solid #e5e6e5;
-  background-color: white;
+  background-color: $white;
   margin: 0rem 0rem 1rem 0rem;
 
   @include breakpoint($medium) {
@@ -36,7 +32,7 @@
   }
 }
 
-.co-logo {
+.project-img {
     max-width: 100%;
     padding: 6% 0rem;
 }

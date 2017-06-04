@@ -1,0 +1,102 @@
+.header {
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  background-color: $white;
+  border-bottom: $border;
+  z-index: 10;
+}
+
+.navbar {
+  border: none;
+}
+
+.nav {
+  position: relative;
+}
+
+.navbar-inverse {
+  background-color: $white;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-top: 7px;
+}
+
+.navbar-nav {
+  display: inline-block;
+  position: relative;
+  padding-top: 8px;
+
+  @include breakpoint($medium) {
+    float: right;
+  }
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  margin-top: .5rem;
+  max-width: 190px;
+
+  @include breakpoint($medium) {
+    margin: 0;
+    float: left;
+    max-width: 290px;
+  }
+}
+
+.navbar-brand {
+  padding: 12px;
+
+  @include breakpoint($medium) {
+    padding-left: 0;
+  }
+}
+
+ul.menu {
+  display: none;
+
+  @include breakpoint($medium) {
+    display: inline-block;
+    position: relative;
+    float: right;
+    bottom: 5px;
+  }
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  background-color: transparent;
+}
+
+.navbar-toggle .icon-bar {
+  width: 40px;
+  height: 4px;
+  margin-top: 12px;
+  color: #231F20;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #231F20;
+}
+
+.navbar-inverse .navbar-toggle {
+  border: none;
+  padding-top: 4px;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  background-color: $white;
+  padding-bottom: .5rem;
+
+  @include breakpoint($medium) {
+    border: none;
+    padding: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.contact {
+  position: relative;
+  margin: auto;
+  padding: 3.25rem 35px 5rem;
+
+  @include breakpoint($medium) {
+    padding: 3.25rem 35px 12rem;
+  }
+}
+
+.contact-leadin {
+  text-align: center;
+}
+
+.contact-email {
+  text-align: center;
+}

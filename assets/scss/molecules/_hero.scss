@@ -1,0 +1,44 @@
+.hero-cover {
+  position: relative;
+  width: 100%;
+  height: $hero-height;
+  background-color: #231F20;
+}
+
+.hero-img {
+  position: relative;
+  background-image: url("../images/hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  opacity: .7;
+  width: 100%;
+  height: $hero-height;
+}
+
+.slogan-wrapper {
+  position: absolute;
+  text-align: center;
+  opacity: 100;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
+
+  @include breakpoint($medium) {
+    bottom:150px;
+    left: 23%;
+    right: 23%;
+  }
+}
+
+.slogan {
+  @include breakpoint($medium) {
+    font-size: 1.85rem;
+  }
+}
+
+.slogan-subtitle {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}

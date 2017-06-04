@@ -1,0 +1,17 @@
+.about {
+  @include makeColumn($size:12, $offset:0);
+  @include makeColumn(md, $size:8, $offset:2);
+  position: relative;
+  padding: 50px 7px 40px 7px;
+}
+
+.about-header {
+  text-align: center;
+}
+
+.about-description {
+
+  @include breakpoint($medium) {
+    text-align: center;
+  }
+}

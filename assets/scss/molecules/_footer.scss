@@ -1,0 +1,32 @@
+.footer {
+}
+
+.footer_wrapper {
+  margin: 0 auto;
+  width: 80%;
+  border-top: $border;
+
+  @include breakpoint($medium) {
+    padding: 0.5rem 0;
+  }
+}
+
+.co_name {
+  display: block;
+  text-align: left;
+
+  @include breakpoint($medium) {
+    display: inline-block;
+  }
+}
+
+.contact_us {
+  display: block;
+  text-align: left;
+
+  @include breakpoint($medium) {
+    display: inline-block;
+    float: right;
+    text-align: right;
+  }
+}
