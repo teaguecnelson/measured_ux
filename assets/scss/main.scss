@@ -1,0 +1,338 @@
+// Global 
+@import "helpers/variables";
+@import "helpers/flex_grid";
+
+// Atoms 
+@import "atoms/text";
+
+// Molecules 
+@import "molecules/companies";
+
+/*--------------------*\
+        Mixins
+\*--------------------*/
+@mixin thumb_wrapper($width) {
+  position: relative;
+  text-align: center;
+  margin: 0 auto 65px;
+  max-width: 900px;
+}
+
+@mixin thumb($float) {
+  float: $float;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #e5e6e5;
+  width: 31%;
+  background-color: white;
+}
+
+@mixin person($float) {
+  float: $float;
+  position: relative;
+  display: inline-block;
+  width: 31%;
+  max-width:400px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+
+/*--------------------*\
+    Global Elements
+\*--------------------*/
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: $background-color;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.spacer {
+  height: 3rem;
+
+  @media screen and (max-width: $breakpoint) {
+    height: 0rem;
+  }
+}
+
+
+/*--------------------*\
+         Header
+\*--------------------*/
+.header {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  background-color: #f7f5f5;
+  border-bottom: $border;
+  z-index: 10;
+}
+
+.navbar {
+  border: none;
+}
+
+.nav {
+
+  @media screen and (max-width: $breakpoint) {
+    position: relative;
+  }
+}
+
+.navbar-inverse {
+  background-color: #f7f5f5;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.navbar-nav {
+  display: inline-block;
+  position: relative;
+  padding-top: 12px;
+
+  @media (min-width: $breakpoint) {
+    float: right;
+  }
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  float: left;
+  max-height: 50px;
+  max-width: 285px;
+
+  @media screen and (max-width: $breakpoint) {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    float: none;
+    margin-top:.5rem;
+    max-width: 190px;
+  }
+}
+
+.navbar-brand {
+  padding: 12px;
+
+  @media (min-width: $breakpoint) {
+    padding-left: 0;
+  }
+}
+
+ul.menu {
+  display: inline-block;
+  position: relative;
+  float: right;
+  bottom: 5px;
+
+  @media screen and (max-width: $breakpoint) {
+    display: none;
+  }
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  background-color: transparent;
+}
+
+.navbar-toggle .icon-bar {
+  width: 40px;
+  height: 4px;
+  margin-top: 12px;
+  color: #231F20;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #231F20;
+}
+
+.navbar-inverse .navbar-toggle {
+  border: none;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border: none;
+
+  @media screen and (max-width: $breakpoint) {
+    background-color: #ffffff;
+    padding-bottom: .5rem;
+  }
+}
+
+
+/*--------------------*\
+         Hero
+\*--------------------*/
+.hero {
+  position: relative;
+  margin-left: 0px;
+  width: 100%;
+  height: 90vh;
+  background-color: #231F20;
+}
+
+.hero_img {
+  position: relative;
+  margin-left: 0px;
+  background-image: url("../images/spacexxx.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  opacity: .7;
+  width: 100%;
+  height: 90vh;
+}
+
+.slogan {
+  position: absolute;
+  bottom:150px;
+  left: 23%;
+  right: 23%;
+  text-align: center;
+  opacity: 100;
+
+  @media screen and (max-width: $breakpoint) {
+    left: 10%;
+    right: 10%;
+    bottom: 5%;
+  }
+}
+
+.slogan-txt {
+  @media screen and (max-width: $breakpoint) {
+    font-size: 1.85rem;
+  }
+}
+
+
+/*--------------------*\
+         About
+\*--------------------*/
+.about {
+  position: relative;
+  width: 63%;
+  margin: auto;
+  padding: 35px;
+  padding-top: 50px;
+  max-width: 800px;
+
+  @media screen and (max-width: $breakpoint) {
+    width: 80%;
+  }
+}
+
+.about_leadin {
+  text-align: center;
+}
+
+.list {
+  padding-left: 2rem;
+}
+
+
+/*--------------------*\
+         Team  //FIXME section needs cleaning
+\*--------------------*/
+.team {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  padding-top: 20px;
+  height: auto;
+
+  @media screen and (max-width: $breakpoint) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .person_left {
+    @include person(center);
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .person_center {
+    @include person(center);
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .person_right {
+    @include person(center);
+    width: 100%;
+    margin-bottom: 1rem;
+  }  
+
+  .person {
+    width: 100%;
+    object-fit: contain;
+  }
+
+    @media screen and (min-width: $breakpoint) {
+      @include thumb_wrapper(70%);
+      padding: 20px;
+
+      .person_left {
+        @include person(left);
+      }
+
+      .person_center {
+        @include person(none);
+      }
+
+      .person_right {
+        @include person(right);
+      }
+    }
+}
+
+.clear {
+  clear: both;
+}
+
+
+/*--------------------*\
+         Footer  //Could be cleaned
+\*--------------------*/
+.footer {
+  padding: 1.5rem 0;
+}
+
+.footer_container {
+  margin: 0 auto;
+  width: 80%;
+  border-top: $border;
+}
+
+.co_name {
+  position: relative;
+  float: left;
+  margin: 1.7rem 0;
+
+  @media screen and (max-width: 515px) {
+    margin: 1rem auto 0;
+  }
+}
+
+.contact_us {
+  position: relative;
+  float: right;
+  margin: 1.7rem 0;
+
+  @media screen and (max-width: 515px) {
+    margin: .8rem auto 1.6rem;
+    float: left;
+  }
+}
