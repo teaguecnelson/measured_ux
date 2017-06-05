@@ -372,7 +372,7 @@ ul.menu {
   text-align: center;
   margin: auto;
   opacity: 100;
-  top: 11rem; }
+  top: 7rem; }
   @media only screen and (min-width: 768px) {
     .slogan-wrapper {
       max-width: 40%;
@@ -387,13 +387,16 @@ ul.menu {
       top: 110px;
       left: 64px; } }
 
-@media only screen and (min-width: 768px) {
-  .slogan {
-    /*    color: #CDD6C1;*/
-    color: #fefefe;
-    line-height: 3.25rem;
-    text-align: left;
-    font-size: 2.75rem; } }
+.slogan {
+  font-size: 3.75rem;
+  line-height: 3.65rem; }
+  @media only screen and (min-width: 768px) {
+    .slogan {
+      /*    color: #CDD6C1;*/
+      color: #fefefe;
+      line-height: 3.25rem;
+      text-align: left;
+      font-size: 2.75rem; } }
 
 .slogan-subtitle {
   text-align: center;

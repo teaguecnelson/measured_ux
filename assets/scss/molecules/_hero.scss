@@ -30,7 +30,7 @@
   text-align: center;
   margin: auto;
   opacity: 100;
-  top: 11rem;
+  top: 7rem;
 
   @include breakpoint($medium) {
     max-width: 40%;
@@ -49,6 +49,8 @@
 }
 
 .slogan {
+  font-size: 3.75rem;
+  line-height: 3.65rem;
   @include breakpoint($medium) {
 /*    color: #CDD6C1;*/
     color: $white;
