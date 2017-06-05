@@ -1,3 +1,7 @@
+.services-row {
+    @include makeRow($no-padding:true);
+}
+
 .services {
   @include makeColumn($size:12, $offset:0);
   @include makeColumn(md, $size:10, $offset:1);

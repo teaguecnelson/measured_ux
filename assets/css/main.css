@@ -54,14 +54,14 @@
 /**
  * Spacing mixin to create uniform margin/padding
  */
-.row, .services, .project-wrapper, .about {
+.services-row, .row, .services, .project-wrapper, .about {
   display: flex;
   display: -webkit-flex; }
 
 /**
  * Row wrapper class, flex box parent.
  */
-.row {
+.services-row, .row {
   box-sizing: border-box;
   flex-direction: row;
   flex-wrap: wrap;
@@ -72,11 +72,11 @@
   padding-left: 2rem;
   padding-right: 2rem; }
   @media only screen and (min-width: 768px) {
-    .row {
+    .services-row, .row {
       margin-left: -0.75rem;
       margin-right: -0.75rem; } }
   @media only screen and (min-width: 768px) {
-    .row {
+    .services-row, .row {
       padding-left: 3rem;
       padding-right: 3rem; } }
 
@@ -236,6 +236,9 @@ a:hover {
 
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #818080; }
+
+.services-row {
+  padding: 0; }
 
 .services {
   display: block;
