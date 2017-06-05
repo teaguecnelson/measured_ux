@@ -10,7 +10,6 @@
   margin: 0 12px;
 
   @include breakpoint($medium) {
-  	@include makeColumn(md, $size:8, $offset:2);
     text-align: center;
     margin: 0 auto;
   }

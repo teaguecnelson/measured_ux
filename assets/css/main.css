@@ -120,10 +120,6 @@
     flex-basis: 33.33333%;
     max-width: 33.33333%;
     -webkit-flex-basis: 33.33333%; }
-  .about {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%;
-    -webkit-flex-basis: 66.66667%; }
   .services {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
@@ -131,9 +127,7 @@
   .project-wrapper {
     margin-left: 0%; }
   .services {
-    margin-left: 8.33333%; }
-  .about {
-    margin-left: 16.66667%; } }
+    margin-left: 8.33333%; } }
 
 html {
   font-size: 1.15em; }
@@ -374,11 +368,11 @@ ul.menu {
       background-image: url("../images/mux_cover90.jpg"); } }
 
 .slogan-wrapper {
-  position: relative;
+  position: absolute;
   text-align: center;
   margin: auto;
   opacity: 100;
-  top: %; }
+  top: -20rem; }
   @media only screen and (min-width: 768px) {
     .slogan-wrapper {
       max-width: 40%;
@@ -440,7 +434,11 @@ ul.menu {
 .about {
   position: relative;
   padding: 50px 7px 40px 7px;
-  /*  margin: 0 12px;*/ }
+  margin: 0 12px; }
+  @media only screen and (min-width: 768px) {
+    .about {
+      text-align: center;
+      margin: 0 auto; } }
 
 .about-header {
   text-align: center; }
