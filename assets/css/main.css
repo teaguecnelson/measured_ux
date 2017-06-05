@@ -440,7 +440,7 @@ ul.menu {
 .about {
   position: relative;
   padding: 50px 7px 40px 7px;
-  margin: 0 12px; }
+  /*  margin: 0 12px;*/ }
 
 .about-header {
   text-align: center; }

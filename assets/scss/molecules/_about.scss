@@ -5,10 +5,15 @@
 
 .about {
   @include makeColumn($size:12, $offset:0);
-  @include makeColumn(md, $size:8, $offset:2);
   position: relative;
   padding: 50px 7px 40px 7px;
   margin: 0 12px;
+
+  @include breakpoint($medium) {
+  	@include makeColumn(md, $size:8, $offset:2);
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .about-header {

@@ -26,11 +26,11 @@
 }
 
 .slogan-wrapper {
-  position: relative;
+  position: absolute;
   text-align: center;
   margin: auto;
   opacity: 100;
-  top: %;
+  top: -20rem;
 
   @include breakpoint($medium) {
     max-width: 40%;
