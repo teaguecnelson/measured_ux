@@ -438,7 +438,7 @@ ul.menu {
   @media only screen and (min-width: 768px) {
     .about {
       text-align: center;
-      margin: 0 auto; } }
+      margin: 0 15%; } }
 
 .about-header {
   text-align: center; }
