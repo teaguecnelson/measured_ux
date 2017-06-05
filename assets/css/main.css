@@ -434,7 +434,7 @@ ul.menu {
 .about {
   position: relative;
   padding: 50px 7px 40px 7px;
-  margin: 0 12px; }
+  margin: 0 14px; }
   @media only screen and (min-width: 768px) {
     .about {
       text-align: center;

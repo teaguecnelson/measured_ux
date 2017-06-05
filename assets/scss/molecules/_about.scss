@@ -7,7 +7,7 @@
   @include makeColumn($size:12, $offset:0);
   position: relative;
   padding: 50px 7px 40px 7px;
-  margin: 0 12px;
+  margin: 0 14px;
 
   @include breakpoint($medium) {
     text-align: center;
