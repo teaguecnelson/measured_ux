@@ -1,6 +1,7 @@
 .services {
   @include makeColumn($size:12, $offset:0);
   @include makeColumn(md, $size:10, $offset:1);
+  display: block;
   position: relative;
   padding: 20px 7px 40px 7px;
 }

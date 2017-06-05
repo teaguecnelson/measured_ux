@@ -238,6 +238,7 @@ a:hover {
   color: #818080; }
 
 .services {
+  display: block;
   position: relative;
   padding: 20px 7px 40px 7px; }
 
@@ -402,6 +403,9 @@ ul.menu {
   margin-top: 3rem;
   margin-bottom: 2.5rem; }
 
+.footer {
+  display: block; }
+
 .footer_wrapper {
   margin: 0 auto;
   width: 80%;
@@ -428,6 +432,7 @@ ul.menu {
 
 .about {
   position: relative;
+  display: block;
   padding: 50px 7px 40px 7px; }
 
 .about-header {
@@ -439,6 +444,7 @@ ul.menu {
 
 .contact {
   position: relative;
+  display: block;
   margin: auto;
   padding: 3.25rem 35px 5rem; }
   @media only screen and (min-width: 768px) {
