@@ -378,7 +378,7 @@ ul.menu {
   text-align: center;
   margin: auto;
   opacity: 100;
-  top: 20%; }
+  top: %; }
   @media only screen and (min-width: 768px) {
     .slogan-wrapper {
       max-width: 40%;
@@ -440,7 +440,7 @@ ul.menu {
 .about {
   position: relative;
   padding: 50px 7px 40px 7px;
-  margin: 0 10px; }
+  margin: 0 12px; }
 
 .about-header {
   text-align: center; }
