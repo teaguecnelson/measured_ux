@@ -54,14 +54,14 @@
 /**
  * Spacing mixin to create uniform margin/padding
  */
-.services-row, .row, .services, .project-wrapper, .about {
+.services-row, .row, .about-row, .contact-row, .services, .project-wrapper, .about {
   display: flex;
   display: -webkit-flex; }
 
 /**
  * Row wrapper class, flex box parent.
  */
-.services-row, .row {
+.services-row, .row, .about-row, .contact-row {
   box-sizing: border-box;
   flex-direction: row;
   flex-wrap: wrap;
@@ -72,11 +72,11 @@
   padding-left: 2rem;
   padding-right: 2rem; }
   @media only screen and (min-width: 768px) {
-    .services-row, .row {
+    .services-row, .row, .about-row, .contact-row {
       margin-left: -0.75rem;
       margin-right: -0.75rem; } }
   @media only screen and (min-width: 768px) {
-    .services-row, .row {
+    .services-row, .row, .about-row, .contact-row {
       padding-left: 3rem;
       padding-right: 3rem; } }
 
@@ -238,10 +238,10 @@ a:hover {
   color: #818080; }
 
 .services-row {
-  padding: 0; }
+  padding: 0;
+  display: block; }
 
 .services {
-  display: block;
   position: relative;
   padding: 20px 7px 40px 7px; }
 
@@ -433,9 +433,12 @@ ul.menu {
       float: right;
       text-align: right; } }
 
+.about-row {
+  padding: 0;
+  display: block; }
+
 .about {
   position: relative;
-  display: block;
   padding: 50px 7px 40px 7px; }
 
 .about-header {
@@ -445,9 +448,12 @@ ul.menu {
   .about-description {
     text-align: center; } }
 
+.contact-row {
+  padding: 0;
+  display: block; }
+
 .contact {
   position: relative;
-  display: block;
   margin: auto;
   padding: 3.25rem 35px 5rem; }
   @media only screen and (min-width: 768px) {

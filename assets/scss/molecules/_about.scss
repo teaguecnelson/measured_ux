@@ -1,8 +1,12 @@
+.about-row {
+    @include makeRow($no-padding:true);
+    display: block;
+}
+
 .about {
   @include makeColumn($size:12, $offset:0);
   @include makeColumn(md, $size:8, $offset:2);
   position: relative;
-  display: block;
   padding: 50px 7px 40px 7px;
 }
 
