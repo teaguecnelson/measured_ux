@@ -3,37 +3,58 @@
   width: 100%;
   height: $hero-height;
   background-color: #231F20;
+  border-bottom: 8px solid #1D222B;
 }
 
 .hero-img {
   position: relative;
-  background-image: url("../images/hero.jpeg");
+  background-image: url("../images/mux_cover9.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  opacity: .7;
+  opacity: .5;
   width: 100%;
   height: $hero-height;
+
+  @include breakpoint($medium) {
+    opacity: 1;
+  }
+
+  @include breakpoint($large) {
+    background-image: url("../images/mux_cover90.jpg");
+  }
 }
 
 .slogan-wrapper {
-  position: absolute;
+  position: relative;
   text-align: center;
+  margin: auto;
   opacity: 100;
-  left: 10%;
-  right: 10%;
-  bottom: 5%;
+  bottom: 40%;
 
   @include breakpoint($medium) {
-    bottom:150px;
-    left: 23%;
-    right: 23%;
+    max-width: 40%;
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    top: 100px;
+    left: 55px;
+  }
+
+  @include breakpoint($large) {
+    max-width: 50%;
+    top: 110px;
+    left: 64px;
   }
 }
 
 .slogan {
   @include breakpoint($medium) {
-    font-size: 1.85rem;
+/*    color: #CDD6C1;*/
+    color: $white;
+    line-height: 3.25rem;
+    text-align: left;
+    font-size: 2.75rem;
   }
 }
 

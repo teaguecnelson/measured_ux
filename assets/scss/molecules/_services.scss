@@ -25,10 +25,10 @@
 .project {
   border: 1px solid #e5e6e5;
   background-color: $white;
-  margin: 0rem 0rem 1rem 0rem;
+  margin: 0rem 0rem 0rem 0rem;
 
   @include breakpoint($medium) {
-    margin: 0rem 0.15rem 1.75rem 0.15rem;
+    margin: 0.25rem 0.15rem 0rem 0.15rem;
   }
 }
 
