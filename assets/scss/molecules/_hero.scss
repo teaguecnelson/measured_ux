@@ -30,7 +30,7 @@
   text-align: center;
   margin: auto;
   opacity: 100;
-  bottom: 40%;
+  top: 20%;
 
   @include breakpoint($medium) {
     max-width: 40%;
